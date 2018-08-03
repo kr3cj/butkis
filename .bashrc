@@ -9,5 +9,10 @@ _kube_ps1() {
   [[ -n ${K8S_CONTEXT} ]] && echo "${K8S_CONTEXT%%.*}:${K8S_NS} "
 }
 
+_awsvault_ps1() {
+  [[ -n ${AWS_VAULT} ]] && echo "(aws:${AWS_VAULT}) "
+}
+
 # prefix k8s info onto existing PS1
 export PS1="\[${YELLOW}\]\$(_kube_ps1)\[${NORMAL}\]"$PS1
+export PS1="\[${YELLOW}\]\$(_awsvault_ps1)\[${NORMAL}\]"$PS1
