@@ -1,4 +1,6 @@
 # put this someplace like ~/.bashrc
+# for more advanced features including git branches, see
+#  https://github.com/kr3cj/dotfiles/blob/master/home/.bashrc.d/ps1#L15-L59
 NORMAL=$(tput sgr0)
 YELLOW=$(tput setaf 3)
 
